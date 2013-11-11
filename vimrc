@@ -69,9 +69,8 @@ hi CursorLine guibg=#dfdfdd
 " Use ag instead of ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
-" =-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-"KEY BINDINGS
-" =-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+" KEY BINDINGS
+" =-=-=-=-=-=-=-=-
 let mapleader=',' " set leader to ,
 
 " Format paragraphs (72 columns)
@@ -122,9 +121,8 @@ nnoremap <Leader>sn ]s
 nnoremap <Leader>sp ]p
 nnoremap <Leader>s? z=
 
-" =-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-"FILETYPES
-" =-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+" FILETYPES
+" =-=-=-=-=-=-=-=-
 " use filetype plugins to determine indent settings
 filetype plugin indent on
 
@@ -149,9 +147,8 @@ function! s:SetupSnippets()
   call ExtractSnips("~/.vim/snippets/html", "php")
 endfunction
 
-" =-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-"EDITING
-" =-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+" EDITING
+" =-=-=-=-=-=-=-=-
 set number      " line numbers
 set showbreak=+ " display a + at the beginning of a wrapped line
 set showmatch   " flash the matching bracket on inserting a )]} etc
@@ -203,9 +200,8 @@ if has("persistent_undo")
   set undodir=~/.vim/undofiles,/var/tmp,/tmp,.
 endif
 
-" =-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-"WINDOW SETTINGS
-" =-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+" WINDOW SETTINGS
+" =-=-=-=-=-=-=-=-
 set ruler          " shows cursor position in the lower right
 set showcmd        " shows incomplete command to the left of the ruler
 set winminheight=0 " allow windows to be 0 lines tall
@@ -226,9 +222,8 @@ set statusline+=]                         " close bracket
 set statusline+=%=                        " right-align remainder
 set statusline+=@\ L%l\ C%c\ (%P)(%L)\    " position in file and number of lines
 
-" =-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-"PLUGINS
-" =-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+" PLUGINS
+" =-=-=-=-=-=-=-=-
 runtime macros/matchit.vim
 
 "bufexplorer
