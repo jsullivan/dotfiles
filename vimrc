@@ -1,6 +1,15 @@
-" =-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+" CONTENTS
+" =-=-=-=-=-=-=-=-
 " BASIC OPTIONS
-" =-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+" KEY BINDINGS
+" FILETYPES
+" EDITING
+" WINDOW SETTINGS
+" PLUGINS
+" =-=-=-=-=-=-=-=-
+"
+" BASIC OPTIONS
+" =-=-=-=-=-=-=-=-
 " Make vim behave better than vi-compatible mode
 set nocompatible
 
