@@ -175,7 +175,8 @@ set listchars+=extends:»
 set listchars+=precedes:«
 
 "FOLDING OPTIONS
-set foldenable       " enable folding
+" enable folding
+set foldenable
 
 " start with all folds collapsed when switching buffers
 set foldlevelstart=0
@@ -184,11 +185,13 @@ set foldlevelstart=0
 set foldcolumn=2
 
 "SEARCH OPTIONS
-set ignorecase " makes search patterns case-insensitive by default
+" makes search patterns case-insensitive by default
+set ignorecase
 
 " overrides ignorecase when the pattern contains upper-case characters
 set smartcase
 
+" Show hits on a search pattern as you type
 set incsearch
 
 "SWAP & UNDO OPTIONS
