@@ -19,8 +19,9 @@ alias lha='ls -lha'
 alias t='todo.rb'
 
 # Tmux script aliases
-alias sc='~/dotfiles/tmux_scripts/sc'
 alias horizon='~/dotfiles/tmux_scripts/horizon'
+alias sc='~/dotfiles/tmux_scripts/sc'
+alias roa='~/dotfiles/tmux_scripts/roa'
 
 # Set tmux in 256 color mode (make vim look better)
 alias tmux='TERM=xterm-256color tmux'

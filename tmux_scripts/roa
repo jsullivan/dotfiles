@@ -1,0 +1,25 @@
+# Create a new tmux session and name the window
+tmux -2 new-session -s roa -n editor -d
+
+# Change to the roa directory
+tmux -2 send-keys -t roa 'cd ~/Sites/roa' C-m
+
+# Open vim
+tmux -2 send-keys -t roa 'vim' C-m
+
+# Create a new pane
+tmux -2 split-window -v -t roa
+tmux -2 select-layout main-vertical
+
+# Start the server
+tmux -2 send-keys -t roa:1.2 'cd ~/Sites/roa' C-m
+tmux -2 send-keys -t roa:1.2 'be rails s' C-m
+
+# Start forward
+tmux -2 new-window -n forward
+tmux -2 send-keys -t roa:2 'cd ~' C-m
+tmux -2 send-keys -t roa:2 'forward 3000' C-m
+
+# Attach to the session
+tmux -2 select-window -t roa:1
+tmux -2 attach -t roa
