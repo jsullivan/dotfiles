@@ -18,8 +18,18 @@ set encoding=utf-8
 " Use status line to show auto-complete & more
 set wildmenu
 
-" Set various compatible options
+" Miscellaneous Options. Values:
+"   a: ":read" sets window filename
+"   A: ":write" sets window filename
+"   B: backslash has no special meaning in ":map"
+"   c: search continues from the end of the match
+"   e: automatically add <CR> to the end of executed registers
+"   F: ":write" sets buffer filename
+"   s: set buffer options on entering the buffer
+"   W: refuse to overwrite a readonly file, even with :w!
+"   Z: don't reset 'readonly' when using :w!
 set cpoptions=aABceFsWZ
+
 set wildignore+=*.png,*.jpg,*.gif,*.ai,*.jpeg,*.psd,*.swp,*.jar,*.zip,*.gem,.DS_Store,log/**,tmp/**,coverage/**,rdoc/**
 
 " Show whitespace
@@ -86,6 +96,9 @@ map <C-K> <C-W>k<C-W>_
 map <leader>[ :bprevious<CR>
 map <leader>] :bnext<CR>
 
+" Make <Enter> create a new line in normal mode
+nmap <CR> o<Esc>
+
 " Shortcut to strip trailing whitespace
 map <leader>s :s/\s\+$//g<CR>
 
@@ -138,14 +151,6 @@ autocmd BufRead,BufNewFile *.mkd,*.markdown,*.md,*.mdown,*.mkdn set noexpandtab
 
 " set filetype on config files
 autocmd BufNewFile,BufRead ~/.vim/*  setfiletype vim
-
-" set the snippets for rails/ruby projects
-autocmd vimenter * call s:SetupSnippets()
-function! s:SetupSnippets()
-  call ExtractSnips("~/.vim/snippets/html", "eruby")
-  call ExtractSnips("~/.vim/snippets/html", "xhtml")
-  call ExtractSnips("~/.vim/snippets/html", "php")
-endfunction
 
 " EDITING
 " =-=-=-=-=-=-=-=-
@@ -227,7 +232,7 @@ set statusline+=@\ L%l\ C%c\ (%P)(%L)\    " position in file and number of lines
 
 " PLUGINS
 " =-=-=-=-=-=-=-=-
-runtime macros/matchit.vim
+source $VIMRUNTIME/macros/matchit.vim
 
 "bufexplorer
 let g:bufExplorerDetailedHelp=1     " show full help text by default
