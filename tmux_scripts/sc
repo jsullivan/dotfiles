@@ -13,4 +13,4 @@ tmux -2 select-window -t sc:1
 tmux -2 attach -t sc
 
 # Open Xcode
-open /Applications/Xcode.app
+#open /Applications/Xcode.app
