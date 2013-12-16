@@ -60,7 +60,7 @@ syntax enable
 " Set the color scheme
 let g:solarized_termcolors=256
 colorscheme solarized
-set background=dark
+set background=light
 
 " Spelling. When you need it you need it.
 hi SpellErrors guibg=red guifg=black ctermbg=red ctermfg=black
