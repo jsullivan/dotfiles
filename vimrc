@@ -32,6 +32,9 @@ set cpoptions=aABceFsWZ
 
 set wildignore+=*.png,*.jpg,*.gif,*.ai,*.jpeg,*.psd,*.swp,*.jar,*.zip,*.gem,.DS_Store,log/**,tmp/**,coverage/**,rdoc/**
 
+" Reduce delay when switching back into normal mode
+set timeoutlen=1000 ttimeoutlen=0
+
 " Show whitespace
 set list
 
