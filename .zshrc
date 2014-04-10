@@ -63,13 +63,7 @@ alias tmux='TERM=xterm-256color tmux'
 
 
 # Set xcode, homebrew & mysql paths
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/Applications/Postgres93.app/Contents/MacOS/bin:$HOME/bin:$PATH
-# Export CC=/usr/bin/gcc-4.2
-# I'm commenting out this compiler trying to clean up my zshrc. if shit goes wrong, uncomment this.
-#export CC=/usr/llvm-gcc-4.2/bin/llvm-gcc-4.2
-
-#cleaning up my path by taking some things out and putting them here. if stuff breaks. check here first.
-#/Contents/MacOS/bin:/Developer/usr/bin:
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/Applications/Postgres93.app/Contents/MacOS/bin:$HOME/bin:$PATH:$HOME/code/bork/bin
 
 #Okay, this is fucking weird. I have to uncomment this line for MyDBT, but comment it for SureCritic.
 # To get psql to work
