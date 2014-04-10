@@ -15,8 +15,12 @@ alias nbe='noglob bundle exec'
 alias be='bundle exec'
 alias sc_beta='ssh appuser@beta.surecritic.com'
 alias sc_sandbox='ssh deploy@sandbox.surecritic.com'
+alias core_sandbox='ssh jsullivandigs@108.244.164.253'
+alias controller='ssh root@192.241.215.147'
+alias ansibleshare='ssh root@192.241.225.114'
 alias lha='ls -lha'
 alias t='todo.rb'
+alias git='nocorrect hub'
 
 # Tmux script aliases
 alias horizon='~/dotfiles/tmux_scripts/horizon'
