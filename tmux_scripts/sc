@@ -1,16 +1,28 @@
-tmux -2 new-session -s sc -n editor -d
+# Create a new tmux session and open vim
+tmux -2 new-session -s sc -n vim -d
 tmux -2 send-keys -t sc 'cd ~/Sites/surecritic' C-m
 tmux -2 send-keys -t sc 'vim' C-m
-tmux -2 split-window -v -t sc
-tmux -2 split-window -v -t sc
-tmux -2 select-layout -t sc main-vertical
-tmux -2 send-keys -t sc:1.2 'cd ~/Sites/surecritic' C-m
-tmux -2 send-keys -t sc:1.2 'be rails s -p 5000' C-m
+
+# Create a new window and open the console
 tmux -2 new-window -n console -t sc
 tmux -2 send-keys -t sc:2 'cd ~/Sites/surecritic' C-m
 tmux -2 send-keys -t sc:2 'be rails c' C-m
+
+# Create a new window and open autotest
+tmux -2 new-window -n test -t sc
+tmux -2 send-keys -t sc:3 'cd ~/Sites/surecritic' C-m
+tmux -2 send-keys -t sc:3 'autotest -fbc' C-m
+
+# Create a new window and start the server
+tmux -2 new-window -n server -t sc
+tmux -2 send-keys -t sc:4 'cd ~/Sites/surecritic' C-m
+tmux -2 send-keys -t sc:4 'be rails s -p 5000' C-m
+
+# Create a new window and open todo
+tmux -2 new-window -n todo -t sc
+tmux -2 send-keys -t sc:5 'cd ~/Sites/surecritic' C-m
+tmux -2 send-keys -t sc:5 't' C-m
+
+# Attach to the session
 tmux -2 select-window -t sc:1
 tmux -2 attach -t sc
-
-# Open Xcode
-#open /Applications/Xcode.app
