@@ -62,7 +62,7 @@ syntax enable
 
 " Set the color scheme
 let g:solarized_termcolors=256
-colorscheme solarized
+colorscheme summerfruit256
 set background=light
 
 " Spelling. When you need it you need it.
