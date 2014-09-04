@@ -8,10 +8,10 @@ ok brew vim
 ok brew ctags
 
 # Confirm .vim/bundle exists
-ok directories $HOME/.vim/bundle
+ok directory $HOME/.vim/bundle
 
 # Set destination to bundle directory
-destination push $HOME/.vim/bundle
+destination $HOME/.vim/bundle
 
 # Basics
 ok github mileszs/ack.vim
@@ -26,6 +26,8 @@ ok github tpope/vim-surround
 ok github godlygeek/tabular
 ok github ervandew/supertab
 ok github ap/vim-css-color
+ok github xolox/vim-notes
+ok github xolox/vim-misc # This is required for vim-notes
 
 # Syntax highlighting
 ok github tpope/vim-git
@@ -39,6 +41,10 @@ ok github groenewege/vim-less
 # Color schemes
 ok github altercation/vim-colors-solarized
 ok github reedes/vim-colors-pencil
+ok github vim-scripts/summerfruit256.vim
+ok github endel/vim-github-colorscheme
+ok github rainerborene/vim-heroku
+ok github noahfrederick/vim-hemisu
 
 # Snippets
 ok github garbas/vim-snipmate
