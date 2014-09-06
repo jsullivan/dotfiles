@@ -63,7 +63,7 @@ alias tmux='TERM=xterm-256color tmux'
 
 
 # Set xcode, homebrew & mysql paths
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/Applications/Postgres93.app/Contents/MacOS/bin:$HOME/bin:$PATH:$HOME/code/bork/bin
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin:$HOME/bin:$PATH:$HOME/code/bork/bin
 
 #Okay, this is fucking weird. I have to uncomment this line for MyDBT, but comment it for SureCritic.
 # To get psql to work
@@ -76,3 +76,9 @@ source $ZSH/oh-my-zsh.sh
 export RBENV_ROOT=/usr/local/var/rbenv
 # enable shims and autocompletion for .rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+## Load ion-client env vars
+[[ -r ~/.ion_client_config ]] && . ~/.ion_client_config
