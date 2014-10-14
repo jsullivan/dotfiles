@@ -242,6 +242,8 @@ let g:bufExplorerDetailedHelp=1     " show full help text by default
 "let g:bufExplorerShowRelativePath=1 " use relative paths
 let g:bufExplorerShowUnlisted=1     " display unlisted buffers
 
+"json
+let g:vim_json_syntax_conceal = 0 " Don't conceal quotes
 "NERDCommenter
 let NERDCreateDefaultMappings=0 " disable default mappings
 let NERDMenuMode=0              " disable menu
