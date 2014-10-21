@@ -7,3 +7,5 @@ ok brew vim
 ok brew tmux
 ok brew wget
 ok brew rbenv
+ok brew heroku-toolbelt
+ok brew tmate --from=nviennot/tmate
