@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 # Thanks to @mattly and @amerine for their wonderful dotfiles
 
+# Brew is installed
+ok brew
+
 # Vim is installed
 ok brew vim
 
@@ -8,6 +11,7 @@ ok brew vim
 ok brew ctags
 
 # Confirm .vim/bundle exists
+ok directory $HOME/.vim
 ok directory $HOME/.vim/bundle
 
 # Set destination to bundle directory
