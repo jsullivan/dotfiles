@@ -24,6 +24,7 @@ ok cask marked
 ok cask vagrant
 ok cask virtualbox
 ok cask vlc
+ok cask steam
 
 ok macstore monosnap 540348655
 ok macstore twitter 409789998
