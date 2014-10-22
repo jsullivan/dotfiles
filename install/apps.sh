@@ -25,6 +25,13 @@ ok cask vagrant
 ok cask virtualbox
 ok cask vlc
 ok cask steam
+ok cask pivotalbooster
+ok cask sabnzbd
+ok cask shady
+ok cask utorrent
+ok cask sequel-pro
+ok cask fuze
+ok cask beamer
 
 ok macstore monosnap 540348655
 ok macstore twitter 409789998
