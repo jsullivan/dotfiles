@@ -9,3 +9,6 @@ ok brew wget
 ok brew rbenv
 ok brew heroku-toolbelt
 ok brew tmate --from=nviennot/tmate
+
+ok brew gcc # This compiler is necessary for mysql51
+ok brew mysql51

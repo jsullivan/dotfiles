@@ -33,6 +33,7 @@ ok cask sequel-pro
 ok cask fuze
 ok cask beamer
 ok cask handbrake
+ok cask yubiswitch
 
 ok macstore monosnap 540348655
 ok macstore twitter 409789998
