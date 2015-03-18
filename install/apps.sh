@@ -20,7 +20,6 @@ ok cask airfoil
 ok cask adobe-creative-cloud
 ok cask minecraft
 ok cask google-chrome
-ok cask marked
 ok cask vagrant
 ok cask virtualbox
 ok cask vlc
@@ -44,3 +43,5 @@ ok macstore "mainstage 3" 634159523
 ok macstore "logitech camera settings" 638332853
 ok macstore "mint quickview" 533491939
 ok macstore "mousepose" 405904955
+ok macstore "marked 2" 890031187
+ok macstore "tweetdeck by twitter" 485812721
