@@ -17,4 +17,3 @@ ok brew go
 ok brew node
 
 ok brew gcc # This compiler is necessary for mysql51
-ok brew mysql51

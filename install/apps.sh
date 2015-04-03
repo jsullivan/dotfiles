@@ -6,7 +6,6 @@ ok cask iterm2
 ok cask slack
 ok cask flowdock
 ok cask hipchat
-ok cask mailbox
 ok cask postgres
 
 # security and backups
@@ -15,6 +14,7 @@ ok cask dropbox
 ok cask backblaze
 ok cask daisydisk
 
+# misc
 ok cask rdio
 ok cask airfoil
 ok cask adobe-creative-cloud
@@ -33,6 +33,7 @@ ok cask fuze
 ok cask beamer
 ok cask handbrake
 ok cask yubiswitch
+ok cask flux
 
 ok macstore monosnap 540348655
 ok macstore twitter 409789998
@@ -45,3 +46,4 @@ ok macstore "mint quickview" 533491939
 ok macstore "mousepose" 405904955
 ok macstore "marked 2" 890031187
 ok macstore "tweetdeck by twitter" 485812721
+ok macstore noizio 928871589
