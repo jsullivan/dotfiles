@@ -21,11 +21,10 @@ alias ansibleshare='ssh root@192.241.225.114'
 alias lha='ls -lha'
 alias t='todo.rb'
 alias git='nocorrect hub'
+alias ic='ion-client'
 
 # Tmux script aliases
-alias horizon='~/dotfiles/tmux_scripts/horizon'
-alias sc='~/dotfiles/tmux_scripts/sc'
-alias roa='~/dotfiles/tmux_scripts/roa'
+alias sc='~/code/dotfiles/tmux_scripts/sc'
 
 # Set tmux in 256 color mode (make vim look better)
 alias tmux='TERM=xterm-256color tmux'
