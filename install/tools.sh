@@ -16,5 +16,7 @@ ok cask gpgtools
 ok brew go
 ok brew node
 ok brew watch
+ok brew sslscan
+ok brew ngrok
 
 ok brew gcc # This compiler is necessary for mysql51
