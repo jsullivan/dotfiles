@@ -60,15 +60,16 @@ call pathogen#runtime_append_all_bundles()
 " Turn on syntax highlighting
 syntax enable
 
+" Let JSX syntax highlight on .js files too
+let g:jsx_ext_required = 0
+
 " Set the color scheme
 let g:solarized_termcolors=256
-" colorscheme summerfruit256
-colorscheme solarized
-set background=light
+colorscheme solarized " I also like: beauty256
+set background=dark
 
 " Spelling. When you need it you need it.
 hi SpellErrors guibg=red guifg=black ctermbg=red ctermfg=black
-set spell spelllang=en_us
 
 " CursorLine for the current window(buffer) only.
 augroup CursorLine
@@ -144,14 +145,13 @@ nnoremap <Leader>s? z=
 filetype plugin indent on
 
 " ruby and yaml indentation
-autocmd FileType ruby,rdoc,cucumber,yaml,html,eruby set softtabstop=2 shiftwidth=2 tabstop=2
+autocmd FileType ruby,rdoc,cucumber,yaml,html,eruby,markdown set softtabstop=2 shiftwidth=2 tabstop=2
 autocmd BufNewFile,BufRead Gemfile     setfiletype ruby
 autocmd BufNewFile,BufRead config.ru   setfiletype ruby
 autocmd BufNewFile,BufRead *.jst       setfiletype eruby.html
 
 " markdown files
-autocmd BufRead,BufNewFile *.mkd,*.markdown,*.md,*.mdown,*.mkdn set softtabstop=4 shiftwidth=4 tabstop=4
-autocmd BufRead,BufNewFile *.mkd,*.markdown,*.md,*.mdown,*.mkdn set noexpandtab
+autocmd BufRead,BufNewFile *.mkd,*.markdown,*.md,*.mdown,*.mkdn set softtabstop=2 shiftwidth=2 tabstop=2 filetype=markdown
 
 " set filetype on config files
 autocmd BufNewFile,BufRead ~/.vim/*  setfiletype vim
@@ -238,6 +238,9 @@ set statusline+=@\ L%l\ C%c\ (%P)(%L)\    " position in file and number of lines
 " =-=-=-=-=-=-=-=-
 source $VIMRUNTIME/macros/matchit.vim
 
+"vim-markdown
+let g:vim_markdown_folding_disabled = 1 " disable that annoying folding
+
 "bufexplorer
 let g:bufExplorerDetailedHelp=1     " show full help text by default
 "let g:bufExplorerShowRelativePath=1 " use relative paths
@@ -257,6 +260,7 @@ map <leader>cu <plug>NERDCommenterUncomment
 
 "NetRW
 let g:netrw_liststyle=3
+let g:netrw_banner=0
 
 "Tabular
 " sets ,a to align = and => lines

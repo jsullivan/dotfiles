@@ -15,13 +15,12 @@ tmux -2 send-keys -t sc:3 'cd ~/code/surecritic' C-m
 # Create a new window, start sphinx and the web server
 tmux -2 new-window -n server -t sc
 tmux -2 send-keys -t sc:4 'cd ~/code/surecritic' C-m
-tmux -2 send-keys -t sc:2 'be rake ts:start' C-m
+tmux -2 send-keys -t sc:4 'be rake ts:start' C-m
 tmux -2 send-keys -t sc:4 'be rails s -p 5000' C-m
 
 # Create a new window for misc
 tmux -2 new-window -n misc -t sc
 tmux -2 send-keys -t sc:5 'cd ~/code/surecritic' C-m
-tmux -2 send-keys -t sc:5 't' C-m
 
 # Attach to the session
 tmux -2 select-window -t sc:1

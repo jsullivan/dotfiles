@@ -2,7 +2,6 @@ ok brew
 ok brew brew-cask --from=caskroom/cask
 
 # work
-ok cask iterm2
 ok cask slack
 ok cask flowdock
 ok cask hipchat

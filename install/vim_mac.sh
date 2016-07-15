@@ -30,25 +30,22 @@ ok github tpope/vim-surround
 ok github godlygeek/tabular
 ok github ervandew/supertab
 ok github ap/vim-css-color
-ok github xolox/vim-notes
-ok github xolox/vim-misc # This is required for vim-notes
 
 # Syntax highlighting
 ok github tpope/vim-git
 ok github tpope/vim-haml
 ok github othree/html5.vim
 ok github elzr/vim-json
-ok github tpope/vim-markdown
+ok github plasticboy/vim-markdown
 ok github kchmck/vim-coffee-script
 ok github groenewege/vim-less
+ok github mustache/vim-mustache-handlebars
+ok github pangloss/vim-javascript
+ok github mxw/vim-jsx
 
 # Color schemes
 ok github altercation/vim-colors-solarized
-ok github reedes/vim-colors-pencil
-ok github vim-scripts/summerfruit256.vim
-ok github endel/vim-github-colorscheme
-ok github rainerborene/vim-heroku
-ok github noahfrederick/vim-hemisu
+ok github vim-scripts/beauty256
 
 # Snippets
 ok github garbas/vim-snipmate

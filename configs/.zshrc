@@ -15,13 +15,13 @@ alias nbe='noglob bundle exec'
 alias be='bundle exec'
 alias sc_beta='ssh appuser@beta.surecritic.com'
 alias sc_sandbox='ssh deploy@sandbox.surecritic.com'
+alias sc_dev='ssh ubuntu@dev.surecritic.com' # This works, just make sure you have the right key in your agent.
 alias core_sandbox='ssh jsullivandigs@108.244.164.253'
-alias controller='ssh root@192.241.215.147'
-alias ansibleshare='ssh root@192.241.225.114'
 alias lha='ls -lha'
 alias t='todo.rb'
 alias git='nocorrect hub'
 alias ic='ion-client'
+alias h='heroku'
 
 # Tmux script aliases
 alias sc='~/code/dotfiles/tmux_scripts/sc'
@@ -81,3 +81,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 ## Load ion-client env vars
 [[ -r ~/.ion_client_config ]] && . ~/.ion_client_config
+
+export NVM_DIR="/Users/jsullivandigs/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn

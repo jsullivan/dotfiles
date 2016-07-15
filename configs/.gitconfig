@@ -1,18 +1,22 @@
 [user]
   name = Josh Sullivan
   email = josh@dipperstove.com
+
 [alias]
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
   co = checkout
   me = log  --author='Josh' --format='%n%Creset%ad, %an:%n%Cgreen%s'
   s = status
   nb = !echo v$(( $(git branch -r |grep v| awk -F '/v' '{print $2}'|sort -n|tail -n1) + 1))
+
 [branch]
   autosetupmerge = true
+
 [core]
   editor = vim
   excludesfile = ~/.gitignore
   pager = less -FRSX
+
 [color]
   diff = auto
   status = auto
@@ -24,9 +28,11 @@
 
 [push]
   default = current
-[gitreview]
-  username = jsullivandigs
+
 [github]
-	user = jsullivan
+  user = jsullivan
+
 [ghi]
 	token = !security find-internet-password -a  -s github.com -l 'ghi token' -w
+[credential]
+	helper = osxkeychain
