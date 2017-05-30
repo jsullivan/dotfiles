@@ -1,48 +1,50 @@
-ok brew
-ok brew brew-cask --from=caskroom/cask
+ok brew mas
 
-# work
+# Work
 ok cask slack
-ok cask flowdock
-ok cask hipchat
 ok cask postgres
 
-# security and backups
-ok cask onepassword
+# Security and backups
+ok cask 1password
 ok cask dropbox
 ok cask backblaze
 ok cask daisydisk
 
-# misc
-ok cask rdio
-ok cask airfoil
-ok cask adobe-creative-cloud
+# Misc
+ok cask spotify
 ok cask minecraft
 ok cask google-chrome
-ok cask vagrant
-ok cask virtualbox
-ok cask vlc
 ok cask steam
-ok cask pivotalbooster
 ok cask sabnzbd
 ok cask shady
-ok cask utorrent
 ok cask sequel-pro
-ok cask fuze
 ok cask beamer
-ok cask handbrake
 ok cask yubiswitch
 ok cask flux
+ok cask sketch
+ok cask google-earth
+ok cask hyper
+ok cask ishowu
+ok cask remote-play
+ok cask screenhero
+ok cask sketch-toolbox
 
-ok macstore monosnap 540348655
-ok macstore twitter 409789998
-ok macstore kindle 405399194
-ok macstore caffeine 411246225
-ok macstore "paprika recipe manager"  451907568
-ok macstore "mainstage 3" 634159523
-ok macstore "logitech camera settings" 638332853
-ok macstore "mint quickview" 533491939
-ok macstore "mousepose" 405904955
-ok macstore "marked 2" 890031187
-ok macstore "tweetdeck by twitter" 485812721
-ok macstore noizio 928871589
+# App store apps
+ok mas 540348655 # monosnap
+ok mas 409789998 # twitter
+ok mas 405399194 # kindle
+ok mas 451907568 # paprika
+ok mas 638332853 # logitech camera settings
+ok mas 405904955 # mousepose
+ok mas 890031187 # marked 2
+ok mas 928871589 # noizio
+ok mas 920404675 # monodraw
+ok mas 499233976 # cathode
+ok mas 414554506 # clocks
+ok mas 934506838 # dash
+ok mas 406056744 # evernote
+ok mas 568494494 # pocket
+ok mas 461369673 # vox
+
+# ok mas sonos
+# ok mas craftmanager
