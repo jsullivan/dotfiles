@@ -33,6 +33,7 @@
   user = jsullivan
 
 [ghi]
-	token = !security find-internet-password -a  -s github.com -l 'ghi token' -w
+ token = !security find-internet-password -a  -s github.com -l 'ghi token' -w
+
 [credential]
-	helper = osxkeychain
+ helper = osxkeychain

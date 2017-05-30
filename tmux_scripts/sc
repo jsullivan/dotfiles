@@ -6,7 +6,7 @@ tmux -2 send-keys -t sc 'vim' C-m
 # Create a new window and open the console
 tmux -2 new-window -n console -t sc
 tmux -2 send-keys -t sc:2 'cd ~/code/surecritic' C-m
-tmux -2 send-keys -t sc:2 'be rails c' C-m
+tmux -2 send-keys -t sc:2 'bin/rails c' C-m
 
 # Create a new window for testing
 tmux -2 new-window -n test -t sc
@@ -16,7 +16,7 @@ tmux -2 send-keys -t sc:3 'cd ~/code/surecritic' C-m
 tmux -2 new-window -n server -t sc
 tmux -2 send-keys -t sc:4 'cd ~/code/surecritic' C-m
 tmux -2 send-keys -t sc:4 'be rake ts:start' C-m
-tmux -2 send-keys -t sc:4 'be rails s -p 5000' C-m
+tmux -2 send-keys -t sc:4 'bin/rails s' C-m
 
 # Create a new window for misc
 tmux -2 new-window -n misc -t sc

@@ -6,6 +6,7 @@
 " EDITING
 " WINDOW SETTINGS
 " PLUGINS
+" CUSTOM COMMANDS
 " =-=-=-=-=-=-=-=-
 "
 " BASIC OPTIONS
@@ -55,7 +56,7 @@ set splitright
 set splitbelow
 
 " Load plugins via pathogen
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 
 " Turn on syntax highlighting
 syntax enable
@@ -248,6 +249,7 @@ let g:bufExplorerShowUnlisted=1     " display unlisted buffers
 
 "json
 let g:vim_json_syntax_conceal = 0 " Don't conceal quotes
+
 "NERDCommenter
 let NERDCreateDefaultMappings=0 " disable default mappings
 let NERDMenuMode=0              " disable menu
@@ -268,3 +270,7 @@ map <leader>a :Tabularize /=>\?<cr>
 
 "Taglist
 map <leader>t :TlistToggle<cr>
+
+" CUSTOM COMMANDS
+" =-=-=-=-=-=-=-=-
+xnoremap gs :vsp /Users/jsullivandigs/scratch.vim

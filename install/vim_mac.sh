@@ -23,13 +23,15 @@ ok github jlanzarotta/bufexplorer
 ok github tpope/vim-fugitive
 ok github scrooloose/nerdcommenter
 ok github tpope/vim-rails
+ok github dsawardekar/ember.vim
 ok github vim-ruby/vim-ruby
 ok github ecomba/vim-ruby-refactoring
-ok github mtth/scratch.vim
 ok github tpope/vim-surround
 ok github godlygeek/tabular
 ok github ervandew/supertab
 ok github ap/vim-css-color
+ok github mzlogin/vim-markdown-toc
+ok github junegunn/goyo.vim
 
 # Syntax highlighting
 ok github tpope/vim-git
