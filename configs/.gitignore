@@ -1,9 +1,6 @@
 .DS_Store
 **/.DS_Store
-todo.txt
-done.txt
 tags
 database.yml
 .vim/.netrwhist
 .vim/bundle/
-josh.rb

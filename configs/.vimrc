@@ -6,7 +6,7 @@
 " EDITING
 " WINDOW SETTINGS
 " PLUGINS
-" CUSTOM COMMANDS
+" PERMANENT MACROS
 " =-=-=-=-=-=-=-=-
 "
 " BASIC OPTIONS
@@ -67,7 +67,7 @@ let g:jsx_ext_required = 0
 " Set the color scheme
 let g:solarized_termcolors=256
 colorscheme solarized " I also like: beauty256
-set background=dark
+set background=light
 
 " Spelling. When you need it you need it.
 hi SpellErrors guibg=red guifg=black ctermbg=red ctermfg=black
@@ -101,9 +101,6 @@ map <C-K> <C-W>k<C-W>_
 " Quick buffer switching
 map <leader>[ :bprevious<CR>
 map <leader>] :bnext<CR>
-
-" Make <Enter> create a new line in normal mode
-nmap <CR> o<Esc>
 
 " Shortcut to strip trailing whitespace
 map <leader>s :s/\s\+$//g<CR>
@@ -187,6 +184,7 @@ set listchars+=precedes:«
 "FOLDING OPTIONS
 " enable folding
 set foldenable
+set foldmethod=manual
 
 " start with all folds collapsed when switching buffers
 set foldlevelstart=0
@@ -239,9 +237,6 @@ set statusline+=@\ L%l\ C%c\ (%P)(%L)\    " position in file and number of lines
 " =-=-=-=-=-=-=-=-
 source $VIMRUNTIME/macros/matchit.vim
 
-"vim-markdown
-let g:vim_markdown_folding_disabled = 1 " disable that annoying folding
-
 "bufexplorer
 let g:bufExplorerDetailedHelp=1     " show full help text by default
 "let g:bufExplorerShowRelativePath=1 " use relative paths
@@ -268,9 +263,6 @@ let g:netrw_banner=0
 " sets ,a to align = and => lines
 map <leader>a :Tabularize /=>\?<cr>
 
-"Taglist
-map <leader>t :TlistToggle<cr>
-
-" CUSTOM COMMANDS
+" PERMANENT MACROS
 " =-=-=-=-=-=-=-=-
-xnoremap gs :vsp /Users/jsullivandigs/scratch.vim
+let @c = "<span style='color: #fff; background: red; padding: 0 6px; margin: 0 6px;'>CHECK</span>"

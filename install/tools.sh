@@ -1,5 +1,3 @@
-ok brew
-
 ok brew git
 ok brew tig
 ok brew hub
@@ -8,8 +6,8 @@ ok brew tmux
 ok brew wget
 ok brew rbenv
 ok brew ruby-build
-ok brew heroku-toolbelt
-ok brew tmate --from=nviennot/tmate
+ok brew heroku
+ok brew tmate
 ok brew ag
 ok brew redis
 ok cask gpgtools
@@ -19,5 +17,16 @@ ok brew watch
 ok brew sslscan
 ok brew tree
 ok brew gist
-
-ok brew gcc # This compiler is necessary for mysql51
+ok brew ctags
+ok brew graphicsmagick
+ok brew graphviz
+ok brew httpie
+ok brew hunspell
+ok brew imagemagick
+ok brew jq
+ok brew readline
+ok brew redis
+ok brew sphinx
+ok brew the_silver_searcher
+ok brew watch
+ok brew asciinema

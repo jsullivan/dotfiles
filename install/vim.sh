@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 # Thanks to @mattly and @amerine for their wonderful dotfiles
 
-# Brew is installed
-ok brew
-
 # Vim is installed
 ok brew vim
 
@@ -38,7 +35,6 @@ ok github tpope/vim-git
 ok github tpope/vim-haml
 ok github othree/html5.vim
 ok github elzr/vim-json
-ok github plasticboy/vim-markdown
 ok github kchmck/vim-coffee-script
 ok github groenewege/vim-less
 ok github mustache/vim-mustache-handlebars

@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="cloud"
+ZSH_THEME="robbyrussell"
 
 # RVM Requires
 setopt nullglob
@@ -62,11 +62,7 @@ alias tmux='TERM=xterm-256color tmux'
 
 
 # Set xcode, homebrew & mysql paths
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin:$HOME/bin:$PATH:$HOME/code/bork/bin
-
-#Okay, this is fucking weird. I have to uncomment this line for MyDBT, but comment it for SureCritic.
-# To get psql to work
-#export DYLD_FALLBACK_LIBRARY_PATH=/Applications/Postgres.app/Contents/MacOS/lib:$DYLD_LIBRARY_PATH
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/opt/mysql@5.6/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:$HOME/bin:$PATH:$HOME/code/bork/bin:/usr/local/opt/go/libexec/bin:/usr/local/opt/qt@5.5/bin
 
 source $ZSH/oh-my-zsh.sh
 
@@ -82,6 +78,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 ## Load ion-client env vars
 [[ -r ~/.ion_client_config ]] && . ~/.ion_client_config
 
-export NVM_DIR="/Users/jsullivandigs/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+## Set nvm dir
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
