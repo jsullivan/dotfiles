@@ -12,7 +12,7 @@ ok directory $HOME/.vim
 ok directory $HOME/.vim/bundle
 
 # Set destination to bundle directory
-destination $HOME/.vim/bundle
+cd $HOME/.vim/bundle
 
 # Basics
 ok github mileszs/ack.vim
