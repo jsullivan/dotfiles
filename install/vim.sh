@@ -14,14 +14,11 @@ ok directory $HOME/.vim/bundle
 cd $HOME/.vim/bundle
 
 # Basics
-ok github mileszs/ack.vim
 ok github jlanzarotta/bufexplorer
 ok github tpope/vim-fugitive
 ok github scrooloose/nerdcommenter
 ok github tpope/vim-rails
-ok github dsawardekar/ember.vim
 ok github vim-ruby/vim-ruby
-ok github ecomba/vim-ruby-refactoring
 ok github tpope/vim-surround
 ok github godlygeek/tabular
 ok github ap/vim-css-color
@@ -36,7 +33,6 @@ ok github tpope/vim-git
 ok github tpope/vim-haml
 ok github othree/html5.vim
 ok github elzr/vim-json
-ok github kchmck/vim-coffee-script
 ok github groenewege/vim-less
 ok github mustache/vim-mustache-handlebars
 ok github pangloss/vim-javascript

@@ -7,27 +7,12 @@ ok cask postgres
 # Security and backups
 ok cask 1password
 ok cask dropbox
-ok cask backblaze
-ok cask daisydisk
 
 # Misc
-ok cask spotify
-ok cask minecraft
 ok cask google-chrome
-ok cask steam
-ok cask sabnzbd
-ok cask shady
 ok cask sequel-pro
-ok cask beamer
 ok cask yubiswitch
-ok cask flux
 ok cask sketch
-ok cask google-earth
-ok cask hyper
-ok cask ishowu
-ok cask remote-play
-ok cask screenhero
-ok cask sketch-toolbox
 
 # App store apps
 ok mas 540348655 # monosnap

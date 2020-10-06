@@ -1,5 +1,5 @@
 ok brew git
-ok brew tig
+ok brew gh
 ok brew hub
 ok brew vim
 ok brew tmux
@@ -27,6 +27,5 @@ ok brew jq
 ok brew readline
 ok brew redis
 ok brew sphinx
-ok brew the_silver_searcher
 ok brew watch
 ok brew asciinema
