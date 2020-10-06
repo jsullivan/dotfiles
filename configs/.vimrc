@@ -6,7 +6,6 @@
 " EDITING
 " WINDOW SETTINGS
 " PLUGINS
-" PERMANENT MACROS
 " =-=-=-=-=-=-=-=-
 "
 " BASIC OPTIONS
@@ -18,6 +17,15 @@ set encoding=utf-8
 
 " Use status line to show auto-complete & more
 set wildmenu
+
+" TAB autocompletion for file paths
+set wildmode=full
+
+" Improve behavior of auto-complete popup
+set completeopt=longest,menuone
+
+" Better buffer management
+set hidden
 
 " Miscellaneous Options. Values:
 "   a: ":read" sets window filename
@@ -37,7 +45,7 @@ set wildignore+=*.png,*.jpg,*.gif,*.ai,*.jpeg,*.psd,*.swp,*.jar,*.zip,*.gem,.DS_
 set timeoutlen=1000 ttimeoutlen=0
 
 " Show whitespace
-set list
+" set list
 
 " Swap files annoy me.
 set noswapfile
@@ -67,7 +75,7 @@ let g:jsx_ext_required = 0
 " Set the color scheme
 let g:solarized_termcolors=256
 colorscheme solarized " I also like: beauty256
-set background=light
+set background=dark
 
 " Spelling. When you need it you need it.
 hi SpellErrors guibg=red guifg=black ctermbg=red ctermfg=black
@@ -82,8 +90,8 @@ augroup END
 " Set the cursorline to something a bit more tolerable.
 hi CursorLine guibg=#dfdfdd
 
-" Use ag instead of ack
-let g:ackprg = 'ag --nogroup --nocolor --column'
+" Use Hardtime plugin to disable h,j,k,l
+" let g:hardtime_default_on = 1
 
 " KEY BINDINGS
 " =-=-=-=-=-=-=-=-
@@ -103,7 +111,7 @@ map <leader>[ :bprevious<CR>
 map <leader>] :bnext<CR>
 
 " Shortcut to strip trailing whitespace
-map <leader>s :s/\s\+$//g<CR>
+map <leader>s :%s/\s\+$//g<CR>
 
 " Re-tab the document (tabs to spaces)
 nmap <silent> <leader><S-t> :retab!<CR>
@@ -123,7 +131,7 @@ nnoremap <NL> i<CR><ESC>
 " This is a handy way to go back to Normal mode without reaching for the <Esc>
 " key and there aren't many english words that have 'k' and 'j' used next to
 " each other.
-inoremap kj <Esc>
+" inoremap kj <Esc>
 
 " Spelling
 " ss  - toggle spelling
@@ -142,37 +150,37 @@ nnoremap <Leader>s? z=
 " use filetype plugins to determine indent settings
 filetype plugin indent on
 
+" Using autocmd for the below settings  allows it to be reset every time you open a
+" file, which keeps overrides from being persistent
+
 " ruby and yaml indentation
-autocmd FileType ruby,rdoc,cucumber,yaml,html,eruby,markdown set softtabstop=2 shiftwidth=2 tabstop=2
+autocmd FileType ruby,rdoc,css,scss,yaml,html,haml,javascript,eruby,markdown,*.tf set softtabstop=2 shiftwidth=2 tabstop=2 expandtab
 autocmd BufNewFile,BufRead Gemfile     setfiletype ruby
 autocmd BufNewFile,BufRead config.ru   setfiletype ruby
 autocmd BufNewFile,BufRead *.jst       setfiletype eruby.html
+"
+"set *.gv files to dot syntax
+autocmd BufRead,BufNewFile *.gv set filetype=dot
 
-" markdown files
-autocmd BufRead,BufNewFile *.mkd,*.markdown,*.md,*.mdown,*.mkdn set softtabstop=2 shiftwidth=2 tabstop=2 filetype=markdown
+" markdown
+autocmd BufRead,BufNewFile *.mkd,*.markdown,*.md,*.mdown,*.mkdn set softtabstop=2 shiftwidth=2 tabstop=2 filetype=markdown expandtab
 
 " set filetype on config files
 autocmd BufNewFile,BufRead ~/.vim/*  setfiletype vim
 
+" golang indentation
+autocmd FileType go,dot,*.gv set softtabstop=4 shiftwidth=4 tabstop=4 expandtab
+
 " EDITING
 " =-=-=-=-=-=-=-=-
-set number      " line numbers
+set nu          " set line numbers (this sets the current line number when userd with relative line numbers
+set rnu         " relative line numbers
 set showbreak=+ " display a + at the beginning of a wrapped line
 set showmatch   " flash the matching bracket on inserting a )]} etc
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-set softtabstop=2 " most of the time, we want a softtabstop of 2
-set tabstop=2     " show tabs with 2 spaces
-set shiftwidth=2  " shift by 2 spaces when using >> and <<, etc
-set expandtab     " no tabs
-
-" Using autocmd for this allows it to be reset every time you open a
-" file, which keeps overrides from being persistent
-autocmd FileType * set softtabstop=2 shiftwidth=2 tabstop=2 expandtab
-
-set list                     " show whitespace
 set listchars=tab:»·,trail:· " show tabs and trailing spaces
 
 " show a » when a line goes off the right edge of the screen
@@ -215,8 +223,8 @@ endif
 " =-=-=-=-=-=-=-=-
 set ruler          " shows cursor position in the lower right
 set showcmd        " shows incomplete command to the left of the ruler
-set winminheight=0 " allow windows to be 0 lines tall
-set winminwidth=0  " allow windows to be 0 lines wide
+set winminheight=1 " allow windows to be 0 lines tall
+set winminwidth=2  " allow windows to be 0 lines wide
 set laststatus=2   " always show statusline
 
 " set up statusline, ends up looking like this:
@@ -235,12 +243,19 @@ set statusline+=@\ L%l\ C%c\ (%P)(%L)\    " position in file and number of lines
 
 " PLUGINS
 " =-=-=-=-=-=-=-=-
-source $VIMRUNTIME/macros/matchit.vim
+
+"Limelight
+" This configures limelight to automatically activate when Goyo is used.
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+
+"vim-illuminate
+" Configure the way other words under the cursor are highlighted
+hi illuminatedWord cterm=standout gui=standout
 
 "bufexplorer
 let g:bufExplorerDetailedHelp=1     " show full help text by default
-"let g:bufExplorerShowRelativePath=1 " use relative paths
-let g:bufExplorerShowUnlisted=1     " display unlisted buffers
+let g:bufExplorerShowRelativePath=1 " use relative paths
 
 "json
 let g:vim_json_syntax_conceal = 0 " Don't conceal quotes
@@ -253,7 +268,6 @@ let NERDDefaultNesting=0        " don't recomment commented lines
 
 map <leader>cc <plug>NERDCommenterToggle
 map <leader>cC <plug>NERDCommenterSexy
-map <leader>cu <plug>NERDCommenterUncomment
 
 "NetRW
 let g:netrw_liststyle=3
@@ -263,6 +277,8 @@ let g:netrw_banner=0
 " sets ,a to align = and => lines
 map <leader>a :Tabularize /=>\?<cr>
 
-" PERMANENT MACROS
-" =-=-=-=-=-=-=-=-
-let @c = "<span style='color: #fff; background: red; padding: 0 6px; margin: 0 6px;'>CHECK</span>"
+" Go-lint add linting via :Lint
+set rtp+=$GOPATH/src/golang.org/x/lint/misc/vim
+
+" vim-go
+let g:go_fmt_command = "goimports"

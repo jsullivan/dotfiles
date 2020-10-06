@@ -1,3 +1,5 @@
+cd ~/code/surecritic
+
 # Create a new tmux session and open vim
 tmux -2 new-session -s sc -n vim -d
 tmux -2 send-keys -t sc 'cd ~/code/surecritic' C-m
@@ -8,11 +10,11 @@ tmux -2 new-window -n console -t sc
 tmux -2 send-keys -t sc:2 'cd ~/code/surecritic' C-m
 tmux -2 send-keys -t sc:2 'bin/rails c' C-m
 
-# Create a new window for testing
-tmux -2 new-window -n test -t sc
+# Create a new window for general use
+tmux -2 new-window -n shell -t sc
 tmux -2 send-keys -t sc:3 'cd ~/code/surecritic' C-m
 
-# Create a new window for misc shell stuff
+# Create a new window for running the web server and other processes
 tmux -2 new-window -n ps -t sc
 tmux -2 send-keys -t sc:4 'cd ~/code/surecritic' C-m
 tmux -2 send-keys -t sc:4 'foreman start' C-m

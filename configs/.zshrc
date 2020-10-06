@@ -5,18 +5,16 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+#
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="simple"
 
 # RVM Requires
-setopt nullglob
+# setopt nullglob
 
 # Aliases
 alias nbe='noglob bundle exec'
 alias be='bundle exec'
-alias sc_beta='ssh appuser@beta.surecritic.com'
-alias sc_sandbox='ssh deploy@sandbox.surecritic.com'
-alias sc_dev='ssh ubuntu@dev.surecritic.com' # This works, just make sure you have the right key in your agent.
-alias core_sandbox='ssh jsullivandigs@108.244.164.253'
 alias lha='ls -lha'
 alias t='todo.rb'
 alias git='nocorrect hub'
@@ -60,9 +58,16 @@ alias tmux='TERM=xterm-256color tmux'
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #plugins=(git git-extras ruby web-search)
 
+# SET ENV VARS
+# =-=-=-=-=-=
+#
 
-# Set xcode, homebrew & mysql paths
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/opt/mysql@5.6/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:$HOME/bin:$PATH:$HOME/code/bork/bin:/usr/local/opt/go/libexec/bin:/usr/local/opt/qt@5.5/bin
+export EDITOR=/usr/local/bin/vim
+
+# Set gopath
+export GOPATH=$HOME/go
+
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/opt/mysql@5.6/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:$HOME/bin:$PATH:$HOME/code/bork/bin:$GOPATH/bin:/usr/local/kubebuilder/bin
 
 source $ZSH/oh-my-zsh.sh
 
@@ -75,10 +80,25 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-## Load ion-client env vars
-[[ -r ~/.ion_client_config ]] && . ~/.ion_client_config
-
 ## Set nvm dir
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
+
+## Load ion-client env vars
+[[ -r ~/.ion_client_config ]] && . ~/.ion_client_config
+
+## Ion client clouds
+cloud() {
+  eval "$(ion-client shell)"
+  cloud "$@"
+}
+
+export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+# pyenv
+# use pyenv shim to target correct install locations of pythons
+eval "$(pyenv init -)"
+export PATH="/usr/local/opt/v8@3.15/bin:$PATH"

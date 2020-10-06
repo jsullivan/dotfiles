@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# Thanks to @mattly and @amerine for their wonderful dotfiles
 
 # Vim is installed
 ok brew vim
@@ -25,10 +24,12 @@ ok github vim-ruby/vim-ruby
 ok github ecomba/vim-ruby-refactoring
 ok github tpope/vim-surround
 ok github godlygeek/tabular
-ok github ervandew/supertab
 ok github ap/vim-css-color
 ok github mzlogin/vim-markdown-toc
 ok github junegunn/goyo.vim
+ok github fatih/vim-go
+ok github Valloric/YouCompleteMe
+ok github jremmen/vim-ripgrep
 
 # Syntax highlighting
 ok github tpope/vim-git
