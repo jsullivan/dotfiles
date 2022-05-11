@@ -75,7 +75,7 @@ let g:jsx_ext_required = 0
 " Set the color scheme
 let g:solarized_termcolors=256
 colorscheme solarized " I also like: beauty256
-set background=dark
+set background=light
 
 " Spelling. When you need it you need it.
 hi SpellErrors guibg=red guifg=black ctermbg=red ctermfg=black
@@ -90,9 +90,6 @@ augroup END
 " Set the cursorline to something a bit more tolerable.
 hi CursorLine guibg=#dfdfdd
 
-" Use Hardtime plugin to disable h,j,k,l
-" let g:hardtime_default_on = 1
-
 " KEY BINDINGS
 " =-=-=-=-=-=-=-=-
 let mapleader=',' " set leader to ,
@@ -101,10 +98,11 @@ let mapleader=',' " set leader to ,
 map ^^ {!}par w72qrg<CR>
 
 " One-stroke window maximizing
+" To return to previous tab split setup, use ':tabclose'
 map <C-H> <C-W>h<C-W><BAR>
-map <C-L> <C-W>l<C-W><BAR>
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
+map <C-L> <C-W>l<C-W><BAR>
 
 " Quick buffer switching
 map <leader>[ :bprevious<CR>
@@ -154,7 +152,7 @@ filetype plugin indent on
 " file, which keeps overrides from being persistent
 
 " ruby and yaml indentation
-autocmd FileType ruby,rdoc,css,scss,yaml,html,haml,javascript,eruby,markdown,*.tf set softtabstop=2 shiftwidth=2 tabstop=2 expandtab
+autocmd FileType ruby,rdoc,css,scss,yaml,html,haml,javascript,eruby,markdown,tf set softtabstop=2 shiftwidth=2 tabstop=2 expandtab
 autocmd BufNewFile,BufRead Gemfile     setfiletype ruby
 autocmd BufNewFile,BufRead config.ru   setfiletype ruby
 autocmd BufNewFile,BufRead *.jst       setfiletype eruby.html
@@ -188,6 +186,9 @@ set listchars+=extends:»
 
 " show a « when a line goes off the left edge of the screen
 set listchars+=precedes:«
+
+" Find and replace command to convert ruby hashrockets to new syntax
+command! -range=% Hr silent execute <line1>.','.<line2>.'s/:\(\w\+\)\s*=>\s*/\1: /g'
 
 "FOLDING OPTIONS
 " enable folding
@@ -282,3 +283,7 @@ set rtp+=$GOPATH/src/golang.org/x/lint/misc/vim
 
 " vim-go
 let g:go_fmt_command = "goimports"
+
+" fzf
+"set rtp+=/usr/local/opt/fzf
+"let g:fzf_layout = { 'down': '~40%' }

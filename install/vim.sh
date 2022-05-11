@@ -26,7 +26,7 @@ ok github mzlogin/vim-markdown-toc
 ok github junegunn/goyo.vim
 ok github fatih/vim-go
 ok github Valloric/YouCompleteMe
-ok github jremmen/vim-ripgrep
+ok github junegunn/fzf.vim
 
 # Syntax highlighting
 ok github tpope/vim-git
@@ -37,6 +37,7 @@ ok github groenewege/vim-less
 ok github mustache/vim-mustache-handlebars
 ok github pangloss/vim-javascript
 ok github mxw/vim-jsx
+ok github hashivim/vim-terraform.git
 
 # Color schemes
 ok github altercation/vim-colors-solarized
