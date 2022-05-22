@@ -75,7 +75,7 @@ let g:jsx_ext_required = 0
 " Set the color scheme
 let g:solarized_termcolors=256
 colorscheme solarized " I also like: beauty256
-set background=dark
+set background=light
 
 " Spelling. When you need it you need it.
 hi SpellErrors guibg=red guifg=black ctermbg=red ctermfg=black
