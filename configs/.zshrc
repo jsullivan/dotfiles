@@ -20,12 +20,17 @@ alias t='todo.rb'
 alias git='nocorrect hub'
 alias ic='ion-client'
 alias h='heroku'
+alias tf='terraform'
 
 # Tmux script aliases
 alias sc='~/code/dotfiles/tmux_scripts/sc'
 
 # Set tmux in 256 color mode (make vim look better)
 alias tmux='TERM=xterm-256color tmux'
+
+# mysql binaries
+alias mysql=/usr/local/mysql/bin/mysql
+alias mysqladmin=/usr/local/mysql/bin/mysqladmin
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -66,8 +71,16 @@ export EDITOR=/usr/local/bin/vim
 
 # Set gopath
 export GOPATH=$HOME/go
+export GOPRIVATE=github.com/heroku
+export GOROOT=/usr/local/opt/go@1.17/libexec
+export PATH=$PATH:$GOROOT/bin
 
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/opt/mysql@5.6/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:$HOME/bin:$PATH:$HOME/code/bork/bin:$GOPATH/bin:/usr/local/kubebuilder/bin
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/opt/mysql@5.6/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:$HOME/bin:$PATH:$HOME/code/bork/bin:$GOPATH/bin:$GOROOT/bin:/usr/local/kubebuilder/bin
+
+
+export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+export PATH="/usr/local/opt/v8@3.15/bin:$PATH"
+export PATH="/usr/local/opt/go@1.17/bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -80,10 +93,6 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-## Set nvm dir
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
-[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 
 ## Load ion-client env vars
 [[ -r ~/.ion_client_config ]] && . ~/.ion_client_config
@@ -94,11 +103,9 @@ cloud() {
   cloud "$@"
 }
 
-export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-
-# pyenv
-# use pyenv shim to target correct install locations of pythons
-eval "$(pyenv init -)"
-export PATH="/usr/local/opt/v8@3.15/bin:$PATH"
+# fzf setup
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if type rg &> /dev/null; then
+  export FZF_DEFAULT_COMMAND='rg --files --hidden'
+  #export FZF_DEFAULT_OPTS='-m --height 50% --border'
+fi
