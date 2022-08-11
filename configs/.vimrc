@@ -10,6 +10,9 @@
 "
 " BASIC OPTIONS
 " =-=-=-=-=-=-=-=-
+" Emergency set kj to esc
+:imap kj <Esc>
+
 " Make vim behave better than vi-compatible mode
 set nocompatible
 
@@ -279,7 +282,7 @@ let g:netrw_banner=0
 map <leader>a :Tabularize /=>\?<cr>
 
 " Go-lint add linting via :Lint
-set rtp+=$GOPATH/src/golang.org/x/lint/misc/vim
+set rtp+="$GOPATH/src/golang.org/x/lint/misc/vim"
 
 " vim-go
 let g:go_fmt_command = "goimports"
